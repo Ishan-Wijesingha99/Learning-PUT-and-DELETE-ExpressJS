@@ -4,11 +4,6 @@ const app = express()
 
 
 
-// PUT request
-// PUT request is for changing data
-
-
-
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
@@ -33,6 +28,7 @@ app.get('/api', (req, res) => {
 
 
 // PUT request
+// PUT request is for changing data
 // the first step is to find the specific thing you want to update, in this case, it is the firstName property in in req.body
 // the second step is to replace it with something else, that's as simple as redefining it using javaScript, req.body.name = 'Jimmy'
 app.put('/api', (req, res) => {
